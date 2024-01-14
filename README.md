@@ -13,6 +13,8 @@
 - **Artifact Repository Server:** Nexus
 - **Notification:** Slack
 - **Cloud:** AWS (EC2 Server)
+- **staging Branch:** cicd-Jenkins
+- **Production Branch:** Prod
 
 ## Flow of Execution
 
