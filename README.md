@@ -78,3 +78,73 @@
 - Ensure that necessary plugins and permissions are set in Jenkins.
 - Customize Slack notifications to fit your team's needs.
 - Regularly update dependencies and review quality gate criteria.
+
+
+# Continuous Deployment Java Project with jenkins and docker
+
+This repository contains a Java project with continuous deployment implemented using Jenkins, Docker, and other related tools.
+
+## Tools Used
+
+- **IDE:** Visual Studio Code
+- **Code Commit:** Git
+- **Version Control System:** GitHub
+- **Continuous Integration Server:** Jenkins
+- **Code Analysis:** Checkmate with SonarQube Scanner plugin
+- **Code Analysis Report:** SonarQube Server
+- **Code Build:** Maven
+- **Notification:** Slack
+- **AWS Cloud:**
+  - EC2 Server
+  - Docker
+  - Amazon ECR (Elastic Container Registry)
+  - Amazon CLI
+  - Amazon ECS (Elastic Container Service)
+
+## Flow of Execution
+
+1. **Code Changes:**
+   - Developer makes code changes, commits, and pushes to GitHub repository.
+
+2. **Continuous Integration with Jenkins:**
+   - Jenkins automatically fetches the latest code commit.
+   - Unit tests using JUnit are executed before the code build step.
+
+3. **Code Analysis:**
+   - Code is analyzed using Checkmate tool with SonarQube Scanner plugin.
+   - Test results are published as reports in the SonarQube Server.
+   - Quality gates criteria are checked in the SonarQube Server.
+
+4. **Code Build with Maven:**
+   - If the code passes quality gates, Maven is used to build the Java application.
+
+5. **Docker Image Build:**
+   - Tomcat Docker image is built with the application artifact.
+   - Docker image is published to Amazon ECR (Elastic Container Registry).
+
+6. **Deployment to Amazon ECS:**
+   - Using Amazon CLI, the Docker image is deployed to Amazon ECS (Elastic Container Service).
+   - ECS fetches the latest image from ECR and runs the application.
+
+7. **Slack Notifications:**
+   - Slack notifications are sent during each stage of the continuous deployment process.
+   - Failure notifications are sent in case of any issues.
+
+8. **Success Notification:**
+   - Once the build is successfully completed, a success notification is sent via Slack.
+
+## Prerequisites
+
+Ensure you have the following tools installed and configured:
+- Docker
+- Maven
+- Jenkins
+- SonarQube Server
+- Amazon CLI
+
+## Usage
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
