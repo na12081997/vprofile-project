@@ -1,4 +1,6 @@
-# Continuous Integration Java Project with Jenkins
+# End to End Continuous Integration - Continous Deployment of Java Project using Jenkins and docker
+
+# Continuous Integration using Jenkins - Java 
 
 ## Tools Used
 - **IDE:** Visual Studio Code
@@ -80,7 +82,7 @@
 - Regularly update dependencies and review quality gate criteria.
 
 
-# Continuous Deployment Java Project with jenkins and docker
+# Continuous Deployment using jenkins and docker - Java Project
 
 This repository contains a Java project with continuous deployment implemented using Jenkins, Docker, and other related tools.
 
